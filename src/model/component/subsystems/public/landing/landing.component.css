@@ -1,0 +1,35 @@
+.landing h1 {
+	text-align: center;
+}
+
+.landing .card {
+	display: block !important;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.landing .city {
+	margin-top: 2rem;
+	padding: 2rem;
+}
+
+.landing .weather {
+	margin-top: 2rem;
+	/*padding: 2rem;*/
+}
+
+.landing .weather-main-temperature {
+	font-size: 15rem;
+	text-align: center;
+}
+
+.landing .weather-extra {
+	margin-top: 5rem;
+	margin-bottom: 2rem;
+	text-align: right;
+}
+
+.landing .weather-extra-value {
+	text-align: left;
+	font-weight: bolder;
+}

@@ -11,8 +11,8 @@ const injectTapEventPlugin = require('react-tap-event-plugin');
 injectTapEventPlugin();
 
 // Materialice CSS UI Framework dependencies
-require('materialize-css/dist/css/materialize.min.css');
-require('materialize-css/dist/js/materialize.js');
+// require('materialize-css/dist/css/materialize.min.css');
+// require('materialize-css/dist/js/materialize.js');
 
 // JQuery dependencies
 const jQuery = require('jquery/dist/jquery');

@@ -1,4 +1,4 @@
-import {Record} from 'immutable'
+import {Map} from 'immutable'
 
 import {set} from 'model/helper/immutablejs-map'
 import {pushStack} from 'model/state/redux/stack/methods'
@@ -29,7 +29,7 @@ pushStack('api.geobytes.cities.getStartedWith.finishWithError', (currentState, p
 
 	dispatch(
 		'notification.error.insert',
-		new Record({
+		new Map({
 			title: "Error when trying to get cities",
 			description: "Was not possible to get the cities to complete this task.",
 			exception: payload

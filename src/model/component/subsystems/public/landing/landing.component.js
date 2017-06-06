@@ -3,16 +3,14 @@
  */
 import {connect} from 'react-redux'
 
-import app from 'model/storage/app'
-import {default as reduxStore, dispatch} from 'model/state/redux/store'
 import {get} from 'model/helper/immutablejs-map'
 import {getCitiesStartedWith} from 'model/service/geobytes'
+import {getCurrentWeatherByCityName} from 'model/service/open-weather'
 import LandingUI from './landing.ui.component'
 
-const bounds = get(app, 'redux.actions.bounds')
-
 const mapStateToProps = (state, props) => ({
-	cities: get(reduxStore.getState(), 'api.geobytes.cities.getStartedWith.data')
+	city: get(state, 'api.open-weather.weather.current.byCityName.data'),
+	cities: get(state, 'api.geobytes.cities.getStartedWith.data'),
 })
 
 const mapDispatchToProps = (disptach) => ({
@@ -20,7 +18,7 @@ const mapDispatchToProps = (disptach) => ({
 		getCitiesStartedWith(query)
 	},
 	onCityChoosen(city) {
-		console.log(city)
+		getCurrentWeatherByCityName(city)
 	}
 })
 
