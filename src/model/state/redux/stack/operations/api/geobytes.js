@@ -1,8 +1,15 @@
-import {Record, List} from 'immutable'
+import {Record} from 'immutable'
 
 import {set} from 'model/helper/immutablejs-map'
 import {pushStack} from 'model/state/redux/stack/methods'
 import {dispatch} from 'model/state/redux/store'
+
+pushStack('api.geobytes.cities.getStartedWith.initialize', (currentState, payload) => {
+	let nextState = set(currentState, 'api.geobytes.cities.getStartedWith.loading', false)
+	nextState = set(currentState, 'api.geobytes.cities.getStartedWith.data', [])
+
+	return nextState
+})
 
 pushStack('api.geobytes.cities.getStartedWith.start', (currentState, payload) => {
 	let nextState = set(currentState, 'api.geobytes.cities.getStartedWith.loading', true)
@@ -12,7 +19,7 @@ pushStack('api.geobytes.cities.getStartedWith.start', (currentState, payload) =>
 
 pushStack('api.geobytes.cities.getStartedWith.finish', (currentState, payload) => {
 	let nextState = set(currentState, 'api.geobytes.cities.getStartedWith.loading', false)
-	nextState = set(nextState, 'api.geobytes.cities.getStartedWith.data', new List(payload))
+	nextState = set(nextState, 'api.geobytes.cities.getStartedWith.data', payload)
 
 	return nextState
 })

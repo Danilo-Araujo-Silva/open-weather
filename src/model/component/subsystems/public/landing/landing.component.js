@@ -1,24 +1,27 @@
 /**
- * Landing page component.
+ * Landing page container component.
  */
-import React from 'react'
-import MainComponent from 'model/component/main.component'
+import {connect} from 'react-redux'
 
-import './landing.component.css'
-
+import app from 'model/storage/app'
+import {default as reduxStore, dispatch} from 'model/state/redux/store'
+import {get} from 'model/helper/immutablejs-map'
 import {getCitiesStartedWith} from 'model/service/geobytes'
+import LandingUI from './landing.ui.component'
 
-getCitiesStartedWith('Floria')
+const bounds = get(app, 'redux.actions.bounds')
 
-/**
- * 
- */
-export class Landing extends MainComponent {
+const mapStateToProps = (state, props) => ({
+	cities: get(reduxStore.getState(), 'api.geobytes.cities.getStartedWith.data')
+})
 
-	/**
-   * 
-   */
-  render() {
-    return <div></div>
-  }
-}
+const mapDispatchToProps = (disptach) => ({
+	onCityChange(query) {
+		getCitiesStartedWith(query)
+	},
+	onCityChoosen(city) {
+		console.log(city)
+	}
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(LandingUI)

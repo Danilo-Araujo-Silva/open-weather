@@ -1,5 +1,8 @@
 import {Map} from 'immutable'
 
-const initialState = new Map().asMutable()
+import {set} from 'model/helper/immutablejs-map'
 
-export default initialState.asImmutable()
+let initialState = new Map()
+initialState = set(initialState, 'api.geobytes.cities.getStartedWith.data', [])
+
+export default initialState
