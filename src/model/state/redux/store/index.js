@@ -15,8 +15,8 @@ if (typeof app.getIn('redux.store'.split('.')) === 'undefined') {
 	app.setIn('redux.store'.split('.'), store)
 }
 
-export async function dispatch (actionType, payload) {
-	return await get(get(app, 'redux.actions.bounds'), actionType)(payload)
+export function dispatch (actionType, payload) {
+	return get(get(app, 'redux.actions.bounds'), actionType)(payload)
 }
 
 export default app.getIn('redux.store'.split('.'))

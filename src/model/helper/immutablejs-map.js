@@ -11,5 +11,5 @@ export function set(map, key, value) {
 		throw Error(`Invalid key ("${key}").`)
 	}
 
-	map.setIn(key.split('.'), value)
+	return map.setIn(key.split('.'), value)
 }

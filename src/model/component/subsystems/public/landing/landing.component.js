@@ -6,6 +6,10 @@ import MainComponent from 'model/component/main.component'
 
 import './landing.component.css'
 
+import {getCitiesStartedWith} from 'model/service/geobytes'
+
+getCitiesStartedWith('Floria')
+
 /**
  * 
  */

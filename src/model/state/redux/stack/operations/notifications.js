@@ -8,7 +8,7 @@ const insertNotificaton = (currentState, stateTargetKey, notification) => {
 	if (!array) {
 		array = new List()
 	}
-	array = array.push(payload)
+	array = array.push(notification)
 
 	let nextState = set(currentState, stateTargetKey, array)
 
@@ -28,33 +28,33 @@ const deleteNotification = (currentState, stateTargetKey, index) => {
 }
 
 pushStack('notification.information.insert', (currentState, payload) => {
-	insertNotificaton(currentState, 'notification.information', payload)
+	return insertNotificaton(currentState, 'notification.information', payload)
 })
 
 pushStack('notification.information.delete', (currentState, payload) => {
-	deleteNotificaton(currentState, 'notification.information', payload)
+	return deleteNotification(currentState, 'notification.information', payload)
 })
 
 pushStack('notification.success.insert', (currentState, payload) => {
-	insertNotificaton(currentState, 'notification.success', payload)
+	return insertNotificaton(currentState, 'notification.success', payload)
 })
 
 pushStack('notification.success.delete', (currentState, payload) => {
-	deleteNotificaton(currentState, 'notification.success', payload)
+	return deleteNotification(currentState, 'notification.success', payload)
 })
 
 pushStack('notification.warning.insert', (currentState, payload) => {
-	insertNotificaton(currentState, 'notification.warning', payload)
+	return insertNotificaton(currentState, 'notification.warning', payload)
 })
 
 pushStack('notification.warning.delete', (currentState, payload) => {
-	deleteNotificaton(currentState, 'notification.warning', payload)
+	return deleteNotification(currentState, 'notification.warning', payload)
 })
 
 pushStack('notification.error.insert', (currentState, payload) => {
-	insertNotificaton(currentState, 'notification.error', payload)
+	return insertNotificaton(currentState, 'notification.error', payload)
 })
 
 pushStack('notification.error.delete', (currentState, payload) => {
-	deleteNotificaton(currentState, 'notification.error', payload)
+	return deleteNotification(currentState, 'notification.error', payload)
 })
