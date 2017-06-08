@@ -33,15 +33,17 @@ export default class LandingUI extends MainComponent {
 
 			<Card className="card city">
 				<CardMedia>
-					<AutoComplete
-						dataSource={this.props.cities}
-						onUpdateInput={this.props.onCityChange}
-						onNewRequest={this.props.onCityChoosen}
-						filter={AutoComplete.caseInsensitiveFilter}
-						fullWidth={true}
-						hintText="Type the city name..."
-						floatingLabelText="City"
-					/>
+					<div>
+						<AutoComplete
+							dataSource={this.props.cities}
+							onUpdateInput={this.props.onCityChange}
+							onNewRequest={this.props.onCityChoosen}
+							filter={AutoComplete.caseInsensitiveFilter}
+							fullWidth={true}
+							hintText="Type the city name..."
+							floatingLabelText="City"
+						/>
+					</div>
 				</CardMedia>
 			</Card>
 

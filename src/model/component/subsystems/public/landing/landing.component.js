@@ -15,7 +15,9 @@ const mapStateToProps = (state, props) => ({
 
 const mapDispatchToProps = (disptach) => ({
 	onCityChange(query) {
-		getCitiesStartedWith(query)
+		if (query && query.toString().length > 0) {
+			getCitiesStartedWith(query)
+		}
 	},
 	onCityChoosen(city) {
 		getCurrentWeatherByCityName(city)
