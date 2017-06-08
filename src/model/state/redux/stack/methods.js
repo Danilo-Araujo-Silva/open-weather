@@ -1,4 +1,4 @@
-import {get, set} from 'model/helper/immutablejs-map'
+import {get, set} from 'model/helper/immutable/map'
 import app from 'model/storage/app'
 
 const actionTypeApiStatuses = get(app, 'redux.actions.api.statuses')

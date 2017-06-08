@@ -1,6 +1,6 @@
 import {List} from 'immutable'
 
-import {get, set} from 'model/helper/immutablejs-map'
+import {get, set} from 'model/helper/immutable/map'
 import {pushStack} from 'model/state/redux/stack/methods'
 
 const insertNotificaton = (currentState, stateTargetKey, notification) => {

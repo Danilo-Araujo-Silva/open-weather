@@ -1,4 +1,4 @@
-import {get, set} from 'model/helper/immutablejs-map'
+import {get, set} from 'model/helper/immutable/map'
 import {pushStack} from 'model/state/redux/stack/methods'
 
 pushStack('tasks.running.increment', (currentState, payload) => {

@@ -1,6 +1,6 @@
 import {Map} from 'immutable'
 
-import {get, set} from 'model/helper/immutablejs-map'
+import {get, set} from 'model/helper/immutable/map'
 import app from 'model/storage/app'
 
 let actionBounds = get(app, 'redux.actions.bounds')

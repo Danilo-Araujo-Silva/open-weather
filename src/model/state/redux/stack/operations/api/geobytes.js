@@ -1,6 +1,6 @@
 import {Map} from 'immutable'
 
-import {set} from 'model/helper/immutablejs-map'
+import {set} from 'model/helper/immutable/map'
 import {pushStack} from 'model/state/redux/stack/methods'
 import {dispatch} from 'model/state/redux/store'
 

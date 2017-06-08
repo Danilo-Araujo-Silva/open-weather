@@ -1,6 +1,6 @@
 import {Map} from 'immutable'
 
-import {set} from 'model/helper/immutablejs-map'
+import {set} from 'model/helper/immutable/map'
 
 let initialState = new Map()
 

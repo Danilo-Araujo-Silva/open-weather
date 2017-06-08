@@ -6,7 +6,7 @@ import AutoComplete from 'material-ui/AutoComplete'
 import {Card, CardHeader, CardMedia} from 'material-ui/Card'
 import {Grid, Row, Col} from 'react-flexbox-grid'
 
-import MainComponent from 'model/component/main.component'
+import MainComponent from 'model/component/main/main.component'
 
 import './landing.component.css'
 

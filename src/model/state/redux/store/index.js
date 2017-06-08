@@ -1,4 +1,4 @@
-import {get} from 'model/helper/immutablejs-map'
+import {get} from 'model/helper/immutable/map'
 import app from 'model/storage/app'
 
 if (typeof app.getIn('redux.store'.split('.')) === 'undefined') {
