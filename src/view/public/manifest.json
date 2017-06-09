@@ -1,0 +1,15 @@
+{
+  "short_name": "All-in-One",
+  "name": "All in One Boilerplate",
+  "icons": [
+    {
+      "src": "image/icon/icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
