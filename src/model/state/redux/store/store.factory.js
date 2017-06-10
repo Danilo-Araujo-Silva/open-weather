@@ -8,7 +8,11 @@ const storeFactory = (state = initialState) => {
 	return applyMiddleware(
 		middlewares.mainMiddleware,
 		middlewares.thunkMiddleware
-	)(createStore)(rootReducer, state)
+	)(createStore)(
+		rootReducer,
+		state,
+		window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+	)
 }
 
 export default storeFactory
